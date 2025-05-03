@@ -1,0 +1,39 @@
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 56px;
+
+  background-color: $red-text-color;
+  border: none;
+
+  font-family: inherit;
+  font-weight: 700;
+  color: #fff;
+
+  transition: 0.35s;
+
+  &:hover {
+    background-color: #ae1c23;
+    transition: 0.35s;
+  }
+
+  &:active {
+    background-color: #eb343d;
+    transition: 0.35s;
+  }
+
+  &--nowOnView {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 2 / 6;
+    }
+
+    @include on-desktop {
+      grid-column: 5 / 9;
+    }
+  }
+}
